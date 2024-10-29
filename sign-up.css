@@ -1,0 +1,224 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #eaeaea;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Centering Containers */
+#sign-up-main, #student-main, .parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    color: #fff;
+    animation: fadeIn 1.2s ease forwards;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Container Styles */
+#sign-up-container, .container, .parent-container {
+    background-color: #2e2e2e;
+    padding: 50px 40px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    background: linear-gradient(145deg, #333, #1e1e1e);
+}
+
+#sign-up-container {
+    animation-delay: 0.5s;
+}
+
+/* Headings */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #a1a1a1;
+    margin-bottom: 30px;
+}
+
+/* Box Container */
+#sign-up-box-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sign-up-box {
+    flex: 1 1 45%;
+    height: 180px;
+    background-color: #424242;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sign-up-box:hover {
+    background-color: #555;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.sign-up-box h3 {
+    font-size: 24px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #00695c;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Smooth Page Transitions */
+:target {
+    display: block;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Arrow Animation */
+.down-arrow {
+    animation: bounce 1s infinite; /* Bounce animation */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px); /* Move down */
+    }
+    60% {
+        transform: translateY(5px); /* Move down slightly */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #sign-up-box-container {
+        flex-direction: column;
+    }
+
+    .sign-up-box {
+        height: 160px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+#sign-up-container {
+    animation-delay: 0.5s;
+    position: relative;
+    top: -80px;
+    margin: 0 auto;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Academy</title>
+    <link rel="stylesheet" href="C:\Users\LG\courses.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Available Courses</h1>
+        <div class="box-1">
+            <h2>O Level</h2>
+            <h2>A Level</h2>
+            <h2>Pre O-Level</h2>
+        </div>
+
+        <div class="container-2">
+            <div class="box-2">
+                <ul class="courses-list">
+                    <li class="course-item-1">
+                        <h3>Physics</h3>
+                    </li>
+                    <li class="course-item-2">
+                        <h3>Chemistry</h3>
+                    </li>
+                    <li class="course-item-3">
+                        <h3>Biology</h3>
+                    </li>
+                    <li class="course-item-3">
+                        <h3>Human Biology</h3>
+                    </li>
+                    <li class="course-item-3">
+                        <h3>Mathematics A</h3>
+                    </li>
+                    <li class="course-item">
+                        <h3>Mathematics B</h3>
+                    </li>
+                    <li class="courses-item">
+                        <h3>Pure Mathematics</h3>
+                    </li>
+                    <li class="courses-item">
+                        <h3>ICT</h3>
+                    </li>
+                    <li class="courses-item">
+                        <h3>Accounting</h3>
+                    </li>
+                    <li class="course-item">
+                        <h3>English language B</h3>
+                    </li>
+                    <li class="course-item">
+                        <h3>Bangla</h3>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="box-3">
+                <ul class="courses-list">
+                    <li class="course-item-1">
+                        <h3>Physics</h3>
+                    </li>
+                    <li class="course-item-2">
+                        <h3>Chemistry</h3>
+                    </li>
+                    <li class="course-item-3">
+                        <h3>Biology</h3>
+                    </li>
+                    <li class="course-item-3">
+                        <h3>Mathematics</h3>
+                    </li>
+                    <li class="course-item-3">
+                        <h3>Accounting</h3>
+                    </li>
+                    <li class="course-item">
+                        <h3>Business Studies</h3>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="box-3">
+                <ul class="courses-list">
+                    <li class="course-item-1">
+                        <h3>All Subject</h3>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="slideshow-container">
+                <img src="C:\Users\LG\Downloads\att.BB4c5DN2JiRYomiFHziXEgf9__iOoyq6HI4JkKUfgXI.jpg" class="slideshow-image" alt="Image 7">
+                <img src="C:\Users\LG\Downloads\att.gSTRLT6xj2uxynNtYrrdGZ2S2dxHoKWdJxmr803V394.jpg" class="slideshow-image" alt="Image 1">
+                <img src="C:\Users\LG\Downloads\att.y0VcHBNH5aY0VGN9djWBwbDfn8E52JATfEXYThaGTXk.jpg" class="slideshow-image" alt="Image 2">
+                <img src="C:\Users\LG\Downloads\att._yGW0p5fiYE9gC5tcLM36ZDbPV5GYVOKxNOpUpNg0gw.jpg" class="slideshow-image" alt="Image 3">
+                <img src="C:\Users\LG\Downloads\att.BXx2sJR3f3qwpol7oO1Iovltqjc2DfMaSlD3uk41CUk.jpg" class="slideshow-image" alt="Image 4">
+                <img src="C:\Users\LG\Downloads\PXL_20240205_053626921.jpg" class="slideshow-image" alt="Image 5">
+                <img src="C:\Users\LG\Downloads\PXL_20240205_044234991.jpg" class="slideshow-image" alt="Image 6">
+                <img src="C:\Users\LG\Downloads\PXL_20240205_045114088.jpg" class="slideshow-image" alt="Image 5">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for the slideshow -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slideshow-image');
+
+        // Show the first image
+        images[currentIndex].style.display = 'block';
+
+        // Function to show the next image
+        function showNextImage() {
+            // Hide the current image
+            images[currentIndex].style.display = 'none';
+
+            // Update the index to the next image (loop back to the first one if at the end)
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // Show the next image
+            images[currentIndex].style.display = 'block';
+        }
+
+        // Automatically change images every 3 seconds (3000 ms)
+        setInterval(showNextImage, 3000);
+    </script>
+
+    <footer>
+        <p>283-Dhonia Rasulpur Road-Jatrabari Dhaka.</p>
+    </footer>
+</body>
+
+</html>

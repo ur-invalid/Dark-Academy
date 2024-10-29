@@ -1,0 +1,190 @@
+body {
+    font-family: playfair display serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(3, 3, 3);
+}
+
+.box-1 {
+    display: flex;
+    justify-content: space-around;
+    width: 42vw;
+    color: white;
+}
+
+.container h1 {
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in;
+}
+
+.container-2 {
+    display: flex;
+    color: white;
+}
+
+.course-item-1 {
+    width: 11vw;
+    color: white;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.course-item-1:hover {
+    transform: scale(1.05);
+    background-color: #3A6073;
+}
+
+.course-item-2 :hover {
+    background-color: #3A6073;
+}
+
+.course-item :hover {
+    background-color: #3A6073;
+}
+
+.course-item-3 :hover {
+    background-color: #3A6073;
+}
+.courses-item :hover {
+    background-color: #3A6073;
+}
+
+.course-item-1 h2 {
+    color: rgb(207, 205, 205);
+    padding: 10px 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    color: white;
+}
+
+nav a {
+    color: rgb(247, 230, 230);
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #bc6060;
+    color: white;
+}
+
+h1 {
+    background-color: #3A6073;
+}
+
+footer {
+    background-color: #3A6073;
+    text-align: center;
+    padding: 2px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+p {
+    color: aliceblue;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* List item animations */
+.courses-list li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: listItemFadeIn 0.5s forwards;
+}
+
+.courses-list li:nth-child(1) { animation-delay: 0.1s; }
+.courses-list li:nth-child(2) { animation-delay: 0.2s; }
+.courses-list li:nth-child(3) { animation-delay: 0.3s; }
+.courses-list li:nth-child(4) { animation-delay: 0.4s; }
+.courses-list li:nth-child(5) { animation-delay: 0.5s; }
+.courses-list li:nth-child(6) { animation-delay: 0.6s; }
+.courses-list li:nth-child(7) { animation-delay: 0.7s; }
+.courses-list li:nth-child(8) { animation-delay: 0.8s; }
+.courses-list li:nth-child(9) { animation-delay: 0.9s; }
+.courses-list li:nth-child(10) { animation-delay: 1s; }
+
+@keyframes listItemFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slideshow-image {
+    width: 80%;
+    display: none; /* Hide images by default */
+    animation: fade 1s; /* Add fade animation */
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #000608;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color:#000000;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adds space between images */
+}
+
+.animated-image {
+    width: 150px; /* Set a desired width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.animated-image:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+    opacity: 0.8; /* Slightly fade the image */
+}

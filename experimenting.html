@@ -27,10 +27,10 @@
     <!-- Artistic Navigation Bar -->
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#activities">Activities</a></li>
-            <li><a href="#admission">Admission</a></li>
-            <li><a href="#signup">Sign-Up</a></li>
+            <li><a href="C:\Users\LG\courses.html">Courses</a></li>
+            <li><a href="C:\Users\LG\activities.html">Activities</a></li>
+            <li><a href="C:\Users\LG\admission.html">Admission</a></li>
+            <li><a href="C:\Users\LG\sign-up.html">Sign-Up</a></li>
         </ul>
     </nav>
 
@@ -47,6 +47,8 @@
         </div>
     </section>
 
+    
+
     <!-- Parallax Background Section -->
     <section class="parallax">
         <div class="parallax-text">
@@ -54,30 +56,59 @@
         </div>
     </section>
 
-    <!-- Content Section with Geometric Shapes -->
-    <section class="content-section" id="activities">
-        <div class="content-grid">
-            <div class="grid-item">
-                <h2>Activities</h2>
-                <p>Push the boundaries of creativity and intellect through our workshops, artistic sessions, and intellectual pursuits.</p>
+    <div class="courses-section-wrapper">
+        <h2 class="courses-section-heading">Our <br>Achievements</h2>
+        <div class="courses-container">
+            <div class="course-box" onclick="openModal('achievement1')">
+                <img src="C:\Users\LG\Downloads\physics.jpg" alt="Class 6 - 8 Image" class="course-image">
+                <h3>A & O level's</h3>
             </div>
-            <div class="grid-item">
-                <h2>Admission</h2>
-                <p>Join an institution where we believe in innovation, courage, and brilliance. Apply now to embark on a journey of enlightenment.</p>
+    
+            <div class="course-box" onclick="openModal('achievement2')">
+                <img src="C:\Users\LG\Downloads\mathematics.jpg" alt="O'Levels Image" class="course-image">
+                <h3>O'Levels</h3>
+            </div>
+    
+            <div class="course-box" onclick="openModal('achievement3')">
+                <img src="C:\Users\LG\Downloads\statistic.jpg" alt="A'Levels Image" class="course-image">
+                <h3>A'Levels</h3>
             </div>
         </div>
-    </section>
+    </div>
+    
+    <!-- Modal Popup for Enlarged Images -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+    
 
-    <!-- Signup Call-to-Action -->
-    <section class="signup-section" id="signup">
-        <h2 class="signup-title">Join DARK Academy</h2>
-        <button class="signup-button">Sign Up Now</button>
-    </section>
+    
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <p>© 2024 DARK Academy. All rights reserved.</p>
-    </footer>
+<footer class="footer">
+    <p>© 2023 DARK Academy. All rights reserved.</p>
+
+     <!-- Contact Information -->
+     <div class="contact-info">
+        <p>Address: 283-Dhonia Rasulpur Road, Jatrabari, Dhaka, Dhaka Division, Bangladesh</p>
+        <p>Phone: <a href="tel:+8801916571450">01916-571450</a></p>
+        <p>Email: <a href="email:darkacademy14@gmail.com">darkacademy14@gmail.com</a></p>
+    </div>
+
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/people/Dark-Academy/100090117305421/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i></a>
+        </a>        
+        <a href="https://maps.app.goo.gl/oYF2sEyWAQ4tzkuF7" target="_blank">
+            <i class="fas fa-map-marker-alt"></i>
+        </a>
+    </div>
+</footer>
+
 
     <!-- JavaScript to handle slideshow animations -->
     <script src="C:\Users\LG\experimenting.js"></script>

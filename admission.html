@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admission Form</title>
+    <link rel="shortcut icon" href="C:\Users\LG\experimenting.css">
+
+    <!-- Import Playfair Display font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Basic reset and styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Playfair Display, serif;
+            background-color: #1b1b1b;
+            color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://example.com/background.jpg');
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .form-container {
+            background-color: rgba(#2e2e2e);
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(92, 91, 91, 0.5);
+            max-width: 400px;
+            width: 100%;
+            color: #ccc;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 1em;
+            color: #fcf9f9;
+            font-size: 2em;
+            
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 1.5em;
+            color: #f9f8f8;
+            font-size: 1.5em;
+        }
+
+        .form-section {
+            margin-bottom: 2em;
+            border-bottom: 1px solid #555;
+            padding-bottom: 1em;
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        .form-section h3 {
+            text-align: center;
+            margin-bottom: 1em;
+            color: #fefdfd;
+            font-size: 1.2em;
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.8em;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            outline: none;
+            border: 1px solid #555;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group select,
+        .form-group textarea {
+            background-color: #222;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            background-color: #444;
+            border-color: #ccc;
+        }
+
+        .nav-btn, .submit-btn {
+            background: linear-gradient(45deg, #222, #444);
+            color: white;
+            padding: 0.8em 1.2em;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1em;
+            text-transform: uppercase;
+            transition: background 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 1em;
+        }
+
+        .nav-btn:hover, .submit-btn:hover {
+            background: linear-gradient(45deg, #444, #666);
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Animation for button */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .nav-btn:active, .submit-btn:active {
+            animation: pulse 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 1.5em;
+                max-width: 90%;
+            }
+
+            .form-container h1 {
+                font-size: 1.5em;
+            }
+
+            .form-container h2 {
+                font-size: 1.2em;
+            }
+
+            .form-section h3 {
+                font-size: 1em;
+            }
+
+            .form-group label {
+                font-size: 0.9em;
+            }
+
+            .form-group input, .form-group select, .form-group textarea {
+                padding: 0.7em;
+                font-size: 0.9em;
+            }
+
+            .nav-btn, .submit-btn {
+                font-size: 0.9em;
+                padding: 0.7em 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="logo">
+            <h1>Dark Academy</h1>
+        </div>
+        <h2>Admission Form</h2>
+        <form id="admissionForm">
+            <div class="form-section active" id="academicInfo">
+                <h3>Academic Information</h3>
+                <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select id="course" name="course" required>
+                        <option value="">--Choose a course--</option>
+                       <option value="Pre O-Levels">Pre O-Levels</option>
+                        <option value="O Levels">O Levels</option>
+                        <option value="A Levels">A Levels</option>
+                    </select>
+                </div>
+                <button type="button" class="nav-btn" onclick="nextSection('personalInfo')">Next</button>
+            </div>
+
+            <div class="form-section" id="personalInfo">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="button" class="nav-btn" onclick="nextSection('contactInfo')">Next</button>
+            </div>
+
+            <div class="form-section" id="contactInfo">
+                <h3>Contact Information</h3>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="4" required placeholder="Enter your address"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function nextSection(sectionId) {
+            document.querySelectorAll('.form-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
